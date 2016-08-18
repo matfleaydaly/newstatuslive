@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   function status(data) {
     data.checks = data.checks.map(function(check) {
-      check.class = check.status === 'up' ? 'operational' : 'major outage' : 'planned maintenance' ;
+      check.class = check.status === 'up' ? 'operational' : 'major outage' ;
       check.text = check.status === 'up' ? 'operational' : 'disruptions';
       check.category = check.tags.reduce(function(cat, tag) {
         switch (tag.name) {
