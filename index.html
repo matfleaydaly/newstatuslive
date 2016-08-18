@@ -41,60 +41,8 @@
           <li>Gallery<span class="status operational">Service Operational</span></li>
           <li>Store<span class="status operational">Service Operational</span></li>
           <li>The Chute<span class="status operational">Service Operational</span></li>
-          <li>Apple News<span class="status operational">Service Operational</span></li>
+          <li>Apple News<span class="status {{ status }}">{{ status }}</span></li>
           </ul>
-          
-  <script id="template" type="x-tmpl-mustache">
-
-    {{#panels.0}}
-      {{#panels}}
-      <div class="panel {{ status }}">
-      {{ status }} on {{#systems}}{{.}}{{/systems}}.
-      </div>
-      {{/panels}}
-    {{/panels.0}}
-
-    {{^panels.0}}
-    <div class="panel operational">
-      All Systems operational.
-    </div>
-    {{/panels.0}}
-
-
-    <h4>Systems</h4>
-    <ul class="systems">
-      {{#systems}}
-      <li>
-        {{ name }} <span class="status {{ status }}">{{ status }}</span>
-      </li>
-      {{/systems}}
-    </ul>
-
-    <h4>Incidents</h4>
-    {{#incidents.0}}
-    {{#incidents}}
-    <div class="incident">
-      <span class="date">{{ created_at }}</span>
-
-
-      <span class="label {{ severity }} float-right">{{ severity }}</span>
-
-      {{#affectedSystems}}
-
-      <span class="label system float-right">{{.}}</span>
-      {{/affectedSystems}}
-      <hr/>
-
-      <span class="title">{{ title }}</span>
-      <p>{{ body }}</p>
-    </div>
-    {{/incidents}}
-    {{/incidents.0}}
-
-    {{^incidents.0}}
-    <em>No past incidents.</em>
-    {{/incidents.0}}
-  </script>
 
         <h4>Current Incidents</h4>
 
