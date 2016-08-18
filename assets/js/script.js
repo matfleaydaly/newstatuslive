@@ -59,7 +59,7 @@ $(document).ready(function() {
       var status_text = {
         operational: 'løst',
         investigating: 'undersøker',
-        'major outage': 'driftsavbrudd',
+        'major outage': 'Major Outage',
         'degraded performance': 'degradert ytelse',
       };
 
