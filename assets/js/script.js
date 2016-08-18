@@ -39,10 +39,6 @@ $(document).ready(function() {
       $panel.attr('class', 'panel ' + status);
       $panel.html(status === 'operational' ? 'Alle systemer er operative.' : 'Ett eller flere systemer ute av drift');
     }
-    if (!$apps.data('incident')) {
-      $apps.attr('class', 'apps ' + status);
-      $apps.html(status === 'operational' ? 'Alle systemer er operative.' : 'Ett eller flere systemer ute av drift');
-    }
 
     data.checks.forEach(function(item) {
       var $here = $categories[item.category];
