@@ -10,7 +10,7 @@ $(document).ready(function() {
   function status(data) {
     data.checks = data.checks.map(function(check) {
       check.class = check.status === 'up' ? 'operational' : 'major outage';
-      check.text = check.status === 'up' ? 'operativ' : 'driftsavbrudd';
+      check.text = check.status === 'up' ? 'operational' : 'disruptions';
       check.category = check.tags.reduce(function(cat, tag) {
         switch (tag.name) {
           case 'payment':
@@ -25,7 +25,7 @@ $(document).ready(function() {
       // check time since last outage
       if (check.status === 'up' && Date.now() - (check.lasterrortime * 1000) <= 86400000) {
         check.class = 'degraded performance';
-        check.text = 'degradert ytelse';
+        check.text = 'degraded performance';
       }
 
       return check;
