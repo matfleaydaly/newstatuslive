@@ -50,7 +50,7 @@ $(document).ready(function() {
       $here.append('<li>' + name + ' <span class="status ' + clas + '">' + text + '</span></li>') });
   };
 
-  $.getJSON('https://api.github.com/repos/matfleaydaly/newstatuslive/issues?state=all').done(message);
+  $.getJSON('https://api.github.com/repos/matfleaydaly/newstatuslive/issues?state=open').done(message);
 
   var $incidents = $('#incidents');
 
