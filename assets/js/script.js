@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   function status(data) {
     data.checks = data.checks.map(function(check) {
-      check.class = check.status === 'up' ? 'operational' : 'major outage';
+      check.class = check.status === 'up' ? 'operational' : 'major outage' : 'planned maintenance';
       check.text = check.status === 'up' ? 'operational' : 'disruptions';
       check.category = check.tags.reduce(function(cat, tag) {
         switch (tag.name) {
@@ -57,10 +57,11 @@ $(document).ready(function() {
   function message(issues) {
     issues.forEach(function(issue) {
       var status_text = {
-        operational: 'løst',
-        investigating: 'undersøker',
+        operational: 'Operational',
+        investigating: 'Investigating',
         'major outage': 'Major Outage',
-        'degraded performance': 'degradert ytelse',
+        'planned maintenance': 'Planned Maintenance',
+        'degraded performance': 'Degraded Performance',
       };
 
       var status = issue.labels.reduce(function(status, label) {
