@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $.getJSON('https://status.app.dnt.no/api/v1/checks').done(status);
 
   var $panel = $('#panel');
   var $categories = {
@@ -51,7 +50,7 @@ $(document).ready(function() {
       $here.append('<li>' + name + ' <span class="status ' + clas + '">' + text + '</span></li>') });
   };
 
-  $.getJSON('https://api.github.com/repos/Turistforeningen/status/issues?state=all').done(message);
+  $.getJSON('https://api.github.com/repos/matfleaydaly/newstatuslive/issues?state=all').done(message);
 
   var $incidents = $('#incidents');
 
