@@ -33,57 +33,46 @@
           MP Productions System Status
         </h1>
 
-			<section class="container" id="main">
-				{% if not panels %}
-					<div class="panel operational">
-						All Systems operational.
-					</div>
-				{% else %}
-					{% for severity, systems in panels.items() if systems %}
-					<div class="panel {{ severity }}">
-						{{ severity.capitalize() }} on {% for system in systems %}{{ system }}{% if not loop.last %}, {% endif %}{% endfor %}.
-					</div>
-					{% endfor %}
-				{% endif %}
+        <div id="panel" class="panel operational">System Operational</div>
 
-				<h4>Systems</h4>
+        <h4>MP Productions Services</h4>
 				<ul class="systems">
-					{% for system, data in systems.items() %}
+					
 					<li>
-						{{ system }} <span class="status {{ data.status }}">{{ data.status }}</span>
+						Dashboard <span class="status operational">operational</span>
 					</li>
-					{% endfor %}
+					
+					<li>
+						Store <span class="status operational">operational</span>
+					</li>
+					
+					<li>
+						Gallery <span class="status operational">operational</span>
+					</li>
+										
+					<li>
+						The Chute <span class="status operational">operational</span>
+					</li>
+										
+					<li>
+						Apple News <span class="status operational">operational</span>
+					</li>
+					
 				</ul>
 
-				<h4>Incidents</h4>
-				{% if incidents %}
-					{% for incident in incidents %}
-					<div class="incident">
-						<span class="date">{{ incident.created }}</span>
+        <h4>Current Incidents</h4>
 
-						{% if incident.closed %}
-							<span class="label operational float-right">resolved</span>
-						{% else %}
-							<span class="label {{ incident.severity }} float-right">{{ incident.severity }}</span>
-						{% endif %}
-						{% for system in incident.systems %}
-							<span class="label system float-right">{{ system }}</span>
-						{% endfor %}
-						<hr/>
+        <div id="incidents">
+          <div class="incident"></div>
+        </div>
 
-						<span class="title">{{ incident.title }}</span>
-						<p>{{ incident.body }}</p>
-						{% for update in incident.updates %}
-							<p><em>Update {{ update.created }}</em><br/>
-							{{ update.body }}
-							</p>
-						{% endfor %}
-					</div>
-					{% endfor %}
-				{% else %}
-					<em>No incidents in the past 90 days.</em>
-				{% endif %}
-			</section>
+      <footer class="footer">
+        <section class="container">
+          <hr/>
+          <p><a href="http://mattsphotos.com.au">MP Productions</a>
+            2016</p>
+        </section>
+      </footer>
 
     </main>
 
