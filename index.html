@@ -36,29 +36,15 @@
         <div id="panel" class="panel operational">System Operational</div>
 
         <h4>MP Productions Services</h4>
+      		<script>
 				<ul class="systems">
-					
-					<li>
-						Dashboard <span class="status operational">operational</span>
-					</li>
-					
-					<li>
-						Store <span class="status operational">operational</span>
-					</li>
-					
-					<li>
-						Gallery <span class="status operational">operational</span>
-					</li>
-										
-					<li>
-						The Chute <span class="status operational">operational</span>
-					</li>
-										
-					<li>
-						Apple News <span class="status operational">operational</span>
-					</li>
-					
-				</ul>
+						{% for system, data in systems.items() %}
+						<li>
+							{{ system }} <span class="status {{ data.status }}">{{ data.status }}</span>
+						</li>
+						{% endfor %}
+					</ul>
+		</script>
 
         <h4>Current Incidents</h4>
 
