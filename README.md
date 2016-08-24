@@ -1,14 +1,6 @@
-# System Status Overview
+# MP PRODUCTIONS LIVE STATUS
 
-Single page to get a system status overviw for important systems in DNT. This is
-based on the awesome [statuspage](https://github.com/pyupio/statuspage) by
-@pyupio.
+Origional script by https://github.com/pyupio/statuspage
 
-![System Status Overview](https://raw.githubusercontent.com/Turistforeningen/status/gh-pages/assets/img/promo.png)
-
-## Features
-
-* [x] Fetch service status dynamicly from REST API
-* [x] Fetch incident messages from GitHub Issues
-
-## [MIT Licensed](https://raw.githubusercontent.com/Turistforeningen/status/gh-pages/LICENSE)
+##OVERVIEW
+The MP Productions Status Page is used to communicate any issues that might be occuring to any services related to the MP Productions Website.
