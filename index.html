@@ -39,7 +39,8 @@
 				<ul class="systems">
 					
 					<li>
-						Dashboard <span class="status operational">Service Operational</span>
+						Dashboard <span class="status {{ data.status }}" data-l10n-id="{{ data.status.replace(" ", '-') }}">{{ data.status }}</span>
+						<li>
 					</li>
 					
 					<li>
