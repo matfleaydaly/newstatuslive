@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   var $panel = $('#panel');
-  var $dashboard = $('#dashboard');
   var $categories = {
     app: $('#apps'),
     service: $('#services'),
@@ -39,11 +38,6 @@ $(document).ready(function() {
     if (!$panel.data('incident')) {
       $panel.attr('class', 'panel ' + status);
       $panel.html(status === 'operational' ? 'Alle systemer er operative.' : 'Ett eller flere systemer ute av drift');
-    }
-    
-    if (!$dashboard.data('incident')) {
-      $dashboard.attr('class', 'dashboard ' + status);
-      $dashboard.html(status === 'operational' ? 'Alle systemer er operative.' : 'Ett eller flere systemer ute av drift');
     }
 
     data.checks.forEach(function(item) {
