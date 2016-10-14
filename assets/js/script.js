@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $.getJSON('https://status.app.dnt.no/api/v1/checks').done(status);
 
   var $panel = $('#panel');
   var $categories = {
@@ -10,8 +9,8 @@ $(document).ready(function() {
 
   function status(data) {
     data.checks = data.checks.map(function(check) {
-      check.class = check.status === 'up' ? 'operational' : 'major outage';
-      check.text = check.status === 'up' ? 'operativ' : 'driftsavbrudd';
+      check.class = check.status === 'up' ? 'operational' : 'major outage' ;
+      check.text = check.status === 'up' ? 'operational' : 'disruptions';
       check.category = check.tags.reduce(function(cat, tag) {
         switch (tag.name) {
           case 'payment':
@@ -26,7 +25,7 @@ $(document).ready(function() {
       // check time since last outage
       if (check.status === 'up' && Date.now() - (check.lasterrortime * 1000) <= 86400000) {
         check.class = 'degraded performance';
-        check.text = 'degradert ytelse';
+        check.text = 'degraded performance';
       }
 
       return check;
@@ -51,17 +50,18 @@ $(document).ready(function() {
       $here.append('<li>' + name + ' <span class="status ' + clas + '">' + text + '</span></li>') });
   };
 
-  $.getJSON('https://api.github.com/repos/Turistforeningen/status/issues?state=all').done(message);
+  $.getJSON('https://api.github.com/repos/matfleaydaly/newstatuslive/issues?state=open').done(message);
 
   var $incidents = $('#incidents');
 
   function message(issues) {
     issues.forEach(function(issue) {
       var status_text = {
-        operational: 'løst',
-        investigating: 'undersøker',
-        'major outage': 'driftsavbrudd',
-        'degraded performance': 'degradert ytelse',
+        operational: 'Operational',
+        investigating: 'Investigating',
+        'major outage': 'Major Outage',
+        'planned maintenance': 'Planned Maintenance',
+        'degraded performance': 'Degraded Performance',
       };
 
       var status = issue.labels.reduce(function(status, label) {

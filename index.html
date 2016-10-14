@@ -4,17 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Service status for DNT.no">
-    <meta name="author" content="Den Norske Turistforening (DNT)">
     <meta name="robots" content="index, follow">
 
-    <title>Status</title>
+    <title>MP Productions Status</title>
 
     <link rel="stylesheet" href="assets/css/roboto.css">
     <link rel="stylesheet" href="assets/css/normalize.min.css">
     <link rel="stylesheet" href="assets/css/milligram.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/logo.png">
+    <link rel="prefetch" type="application/l10n" href="assets/translations.ini" />
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -31,40 +29,66 @@
   <body>
 
     <main class="wrapper">
+      <nav class="navigation">
+				<section class="container">
+					<a class="navigation-title" href="">
+						<h1 class="title">MP Productions System Status</h1>
+					</a>
+				</section>
+			</nav>
       <section class="container" id="main">
-        <h1 class="title">
-          <img class="img" src="assets/img/logo.png">
-          Systemstatus
-        </h1>
+				<div class="panel major outage">
+					<span data-l10n-id="Major-outage">Major outage</span> <span data-l10n-id="on">on</span> Dashboard, Store, Gallery, The Chute, Apple News, WCR Steamers Gallery.
+				</div>
+        <h4>MP Productions Services</h4>
+				<ul class="systems">
 
-        <div id="panel" class="panel operational">Laster systemstatus...</div>
+					<li>
+						Dashboard <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
 
-        <h4>Applikasjoner</h4>
-        <ul id="apps" class="systems"></ul>
+					<li>
+						Store <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
 
-        <h4>Nettbetaling</h4>
-        <ul id="payments" class="systems"></ul>
+					<li>
+						Gallery <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
 
-        <h4>Tjenester</h4>
-        <ul id="services" class="systems"></ul>
+					<li>
+						The Chute <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
 
-        <h4>Hendelser</h4>
+					<li>
+						Apple News <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+
+				</ul>
+
+        <h4>MP Productions Client Websites</h4>
+				<ul class="systems">
+
+					<li>
+						WCR Steamers Gallery <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+
+				</ul>
+
+        <h4>Current Incidents</h4>
 
         <div id="incidents">
           <div class="incident"></div>
         </div>
-
+      </section>
       <footer class="footer">
         <section class="container">
           <hr/>
-          <p>Status page hosted by <a href="https://github.com/Turistforeningen/status">GitHub</a>,
-            generated with <a href="https://github.com/pyupio/statuspage">pyupio/statuspage</a></p>
+          <p><a href="http://mattsphotos.com.au">MP Productions</a> 2016</p>
         </section>
       </footer>
 
     </main>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/statuspage.js"></script>
   </body>
 </html>
