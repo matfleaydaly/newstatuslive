@@ -1,7 +1,7 @@
 FROM python:3.5-alpine
 
 ADD statuspage /statuspage
-COPY requirements/base.txt /statuspage/requirements.txt
+COPY requirements.txt /statuspage/requirements.txt
 
 RUN pip install -r /statuspage/requirements.txt
 
