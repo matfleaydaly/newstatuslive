@@ -1,10 +1,11 @@
 FROM python:3.5-alpine
 
-ADD statuspage /statuspage
+RUN mkdir /statuspage
 COPY requirements.txt /statuspage/requirements.txt
 
 RUN pip install -r /statuspage/requirements.txt
-
+ADD statuspage /statuspage
 WORKDIR /statuspage
 
-CMD [ "python", "statuspage.py"]
+ENTRYPOINT [ "python", "statuspage.py"]
+CMD [ "--version"]
