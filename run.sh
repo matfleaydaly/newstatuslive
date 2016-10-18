@@ -1,1 +1,1 @@
-docker run --rm -ti nst "$@"
+docker run --rm -ti newstatuslive "$@"
