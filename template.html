@@ -29,18 +29,8 @@
 
 		<main class="wrapper">
 
-			<nav class="navigation">
-				<section class="container">
-
-					<a class="navigation-title" href="">
-						<img class="img" src="{{ config.logo }}" height="100">
-						<h1 class="title">{{ config.title }}</h1>
-					</a>
-				</section>
-			</nav>
-
 			<section class="container" id="main">
-				<h1 class="title">{{ config.title }}</h1>
+				<img class="img" src="{{ config.logo }}" height="200"><h1 class="title">{{ config.title }}</h1>
 				{% if not panels %}
 					<div class="panel operational" data-l10n-id="systems-operational">
 						All Systems operational.
