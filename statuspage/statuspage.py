@@ -25,7 +25,7 @@ except AttributeError:
 PY3 = sys.version_info >= (3, 0)
 
 COLORED_LABELS = (
-    ("1192FC", "Planned Maintenance",),
+    ("1192FC", "Planned&nbspMaintenance",),
     ("FFA500", "minor outage"),
     ("681CF5", "General Alert"),
     ("FF4D4D", "major outage", )
