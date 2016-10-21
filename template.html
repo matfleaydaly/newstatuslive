@@ -25,7 +25,7 @@
       ga('send', 'pageview');
     </script>
 	</head>
-	<body style="background-color:#414141">
+	<body style="background-color:#222222">
 
 		<main class="wrapper">
 
@@ -40,6 +40,7 @@
 			</nav>
 
 			<section class="container" id="main">
+				<h1 class="title">{{ config.title }}</h1>
 				{% if not panels %}
 					<div class="panel operational" data-l10n-id="systems-operational">
 						All Systems operational.
