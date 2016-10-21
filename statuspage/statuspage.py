@@ -33,6 +33,7 @@ COLORED_LABELS = (
 STATUSES = [status for _, status in COLORED_LABELS]
 
 SYSTEM_LABEL_COLOR = "171717"
+CLIENT_SYSTEM_LABEL_COLOR = "006400"
 
 TEMPLATES = [
     "template.html",
@@ -45,7 +46,8 @@ DEFAULT_CONFIG = {
     "footer": "Status page hosted by GitHub, generated with <a href='https://github.com/jayfk/statuspage'>jayfk/statuspage</a>",
     "logo": "https://raw.githubusercontent.com/jayfk/statuspage/master/template/logo.png",
     "title": "Status",
-    "favicon": "https://raw.githubusercontent.com/jayfk/statuspage/master/template/favicon.png"
+    "favicon": "https://raw.githubusercontent.com/jayfk/statuspage/master/template/favicon.png",
+    "googleanalytics": "UA-1"
 }
 
 
@@ -190,14 +192,18 @@ def run_update(name, token, org):
     )
 
     systems = get_systems(repo, issues)
+    client_systems = get_client_systems(repo, issues)
+    all_systems = OrderedDict()
+    all_systems.update(systems.items())
+    all_systems.update(client_systems.items())
     incidents = get_incidents(repo, issues)
-    panels = get_panels(systems)
+    panels = get_panels(all_systems)
 
     # render the template
     config = get_config(repo)
     template = Template(template_file.decoded_content.decode("utf-8"))
     content = template.render({
-        "systems": systems, "incidents": incidents, "panels": panels, "config": config
+        "systems": systems, "incidents": incidents, "panels": panels, "config": config, "client_systems": client_systems
     })
 
     # create/update the index.html with the template
@@ -340,10 +346,12 @@ def run_automate(name, token, org, key=None):
     click.secho("Automation activated.", fg="green")
 
 
-def iter_systems(labels):
+def iter_systems(labels, color):
+    names = []
     for label in labels:
-        if label.color == SYSTEM_LABEL_COLOR:
-            yield label.name
+        if label.color == color:
+            names.append( label.name)
+    return names
 
 
 def get_files(repo):
@@ -401,11 +409,16 @@ def get_repo(token, name, org):
 def get_collaborators(repo):
     return [col.login for col in repo.get_collaborators()]
 
+def get_client_systems(repo, issues):
+    return get_systems_status(repo, issues, CLIENT_SYSTEM_LABEL_COLOR)
 
 def get_systems(repo, issues):
+    return get_systems_status(repo, issues, SYSTEM_LABEL_COLOR)
+
+def get_systems_status(repo, issues, label_color):
     systems = OrderedDict()
     # get all systems and mark them as operational
-    for name in sorted(iter_systems(labels=repo.get_labels())):
+    for name in sorted(iter_systems(labels=repo.get_labels(), color=label_color)):
         systems[name] = {
             "status": "operational",
         }
@@ -414,7 +427,7 @@ def get_systems(repo, issues):
         if issue.state == "open":
             labels = issue.get_labels()
             severity = get_severity(labels)
-            affected_systems = list(iter_systems(labels))
+            affected_systems = list(iter_systems(labels, color=label_color))
             # shit is hitting the fan RIGHT NOW. Mark all affected systems
             for affected_system in affected_systems:
                 systems[affected_system]["status"] = severity
@@ -427,7 +440,9 @@ def get_incidents(repo, issues):
     collaborators = get_collaborators(repo=repo)
     for issue in issues:
         labels = issue.get_labels()
-        affected_systems = sorted(iter_systems(labels))
+        affected_systems = iter_systems(labels, color=SYSTEM_LABEL_COLOR)
+        affected_systems += iter_systems(labels, color=CLIENT_SYSTEM_LABEL_COLOR)
+        affected_systems = sorted(affected_systems)
         severity = get_severity(labels)
 
         # make sure that non-labeled issues are not displayed
