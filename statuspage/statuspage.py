@@ -460,7 +460,7 @@ def get_incidents(repo, issues):
             "title": issue.title,
             "systems": affected_systems,
             "severity": severity,
-            "closed": issue.state == "closed",
+            "closed": issue.state == "open",
             "body": markdown2.markdown(issue.body),
             "updates": []
         }
