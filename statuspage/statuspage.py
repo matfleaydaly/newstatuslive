@@ -26,6 +26,7 @@ PY3 = sys.version_info >= (3, 0)
 
 COLORED_LABELS = (
     ("1192FC", "Planned Maintenance",),
+    ("309FFA", "Under Maintenance"),
     ("FFA500", "partial outage"),
     ("681CF5", "General Alert"),
     ("fbca04", "Degraded Performance"),
