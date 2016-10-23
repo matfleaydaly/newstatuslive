@@ -31,6 +31,7 @@ COLORED_LABELS = (
     ("FFA500", "partial outage"),
     ("681CF5", "General Alert"),
     ("fbca04", "Degraded Performance"),
+    ("F9D11F", "Investigating"),
     ("FF4D4D", "major outage", )
 )
 
