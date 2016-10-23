@@ -34,6 +34,7 @@ COLORED_LABELS = (
     ("F9D11F", "Investigating"),
     ("F9B81F", "Identified"),
     ("3CE312", "Monitoring"),
+    ("5AE637", "Resolved"),
     ("FF4D4D", "major outage", )
 )
 
