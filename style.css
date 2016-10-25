@@ -24,3 +24,9 @@ html{box-sizing:border-box;font-size:62.5%}body{color:#fff;font-family:"Roboto",
   top: 18px;
   left: 10px;
 }
+
+a.twitter-follow-button {
+   display: inline-block;
+   text-align: right;
+   width: 100%;
+}
