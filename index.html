@@ -18,12 +18,45 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-77380925-2', 'auto');
       ga('set', 'anonymizeIp', true);
       ga('set', 'forceSSL', true);
       ga('send', 'pageview');
     </script>
+
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+			$( document ).ready(function() {
+				
+				// let's Hide Items
+				$( ".cc-contactpop form").hide();
+				$( ".cc-contactpop i").hide(); 
+				$( ".cc-contactpop p").hide();
+				
+				// Show on elements ".slideDown"
+				$( ".cc-contactpop" ).click(function() {
+					$( ".cc-contactpop form").slideDown(500)
+					$( ".cc-contactpop p").slideDown(500)
+					$( ".cc-contactpop i").slideDown(500)
+
+				});
+				
+				// Close Hidden Part
+				$( ".cc-contactpop i" ).click(function() {
+					$(this).slideUp(500)
+						$( ".cc-contactpop p").slideUp(500)
+						$( ".cc-contactpop form").slideUp(500)
+					return false
+				});
+			
+			});
+		</script>
+<script src="./js/jquery-2.1.0.min.js"></script>
+<script src="./js/app.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 	</head>
 	<body style="background-color:#222222">
 
@@ -141,5 +174,60 @@ Oi, No peaking now... <br>
 
 		</main>
 		<script src="statuspage.js" type="text/javascript"></script>
+
+<div class="cc-contactpop fixed">
+                    <h1>Report an Incident. <span>Click here</span></h1>
+                    <div class="renseignement">
+                      <i class="fa fa-times"></i>
+                      <p>You can report an issue to one of our servies using this form. Please provide a valid email addres, as it may be required for a follow up. Thank You.</p>
+<div id="form-messages"></div>
+                    </div>
+                    <form id="ajax-contact" method="post" action="mailer.php">
+    <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="dropdown">
+<label for="dropdown">Service Affected:</label>
+  <select name="serviceaffected">
+    <option value="applenews">Apple News</option>
+    <option value="dashboard">Dashboard</option>
+    <option value="gallery">Gallery</option>
+    <option value="store">Store</option>
+    <option value="thechute">The Chute</option>
+    <option value="bcsvwebsite">BCSV Website</option>
+    <option value="brendenschonfelderswebsite">Brenden Schonfelder's Website</option>
+    <option value="wcrsteamersgallery">WCR Steamers Gallery</option>
+  </select>
+    </div>
+
+    <div class="dropdown">
+<label for="dropdown">Reporting Issue:</label>
+  <select name="reportingissue">
+    <option value="outage">Website Outage</option>
+    <option value="slowloading">Website Slow Loading</option>
+    <option value="loadingerror">Loading Error</option>
+    <option value="email">Email Issues (Client Only)</option>
+    <option value="brokenlink">Broken Link</option>
+    <option value="outdatedlink">Outdated Link</option>
+    <option value="maintenance">Maintenance Request (Client Only)</option>
+  </select>
+    </div>
+
+<div class="g-recaptcha" data-sitekey="6LdjnhITAAAAADv3Jvj8kbVx7y-xh8mGYgI6KH2h"></div>
+
+    <div class="field">
+        <button type="submit">Send</button>
+    </div>
+</form>
+		</div><!-- /container -->
+
+
 	</body>
 </html>
