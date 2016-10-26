@@ -191,9 +191,12 @@ Thank You. - MPM</p>
 		<script src="statuspage.js" type="text/javascript"></script>
 
 <div class="cc-contactpop fixed">
-                    <object data="http://mattsphotos.com.au/titanic/contactdemo/index.html"> 
-    Your browser doesn’t support the object tag. 
-</object>
+
+	<script type="text/javascript">
+$(document).ready(function(e) {
+    $('#body').load('http://mattsphotos.com.au/titanic/contactdemo/index.html',function(){alert('loaded')});
+});
+</script>
 		</div><!-- /container -->
 
 	</body>
