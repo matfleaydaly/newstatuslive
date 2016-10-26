@@ -88,9 +88,11 @@ $(window).load(function(){
 				</div>
 				<br><br><br><br>
 				
-					<div class="panel operational" data-l10n-id="systems-operational">
-						All Systems operational.
+					
+					<div class="panel partial outage">
+						<span data-l10n-id="Partial-outage">Partial outage</span> <span data-l10n-id="on">on</span> Status Page.
 					</div>
+					
 				
 
 				<h4 >MP Productions Services</h4>
@@ -113,7 +115,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Status Page <span class="status operational" data-l10n-id="operational">operational</span>
+						Status Page <span class="status partial outage" data-l10n-id="partial-outage">partial outage</span>
 					</li>
 					
 					<li>
@@ -149,7 +151,27 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
-					<em data-l10n-id="no.incidents">No incidents available to display at this time.</em>
+					
+					<div class="incident">
+						<span class="date moment">2016-10-26 10:07:44 UTC</span>
+
+						
+							<span class="label partial outage float-right" data-l10n-id="partial-outage">partial outage</span>
+						
+						
+							<span class="label system float-right">Status Page</span>
+						
+						<hr/>
+
+						<span class="title">Partial Outage on Status Page</span>
+						<p>Recently we've been completing some Maintenance Works on the Status Page. <br>
+We are currently experiencing a minor issue with a new feature to the Status Page. <br>
+Please do not use the 'Report Issue' feature that has been added to the Status Page until further advised. <br>
+Thank You. - MPSA</p>
+
+						
+					</div>
+					
 				
 			</section>
 
