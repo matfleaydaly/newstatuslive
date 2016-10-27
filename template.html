@@ -85,6 +85,7 @@ $(window).load(function(){
 				<div class="headername">
   					<img src="{{ config.logo }}" />
  					 <h1>{{ config.title }}</h1>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reporting" style="float: right;">Report an Incident</button>
 				</div>
 				<br><br><br><br>
 				{% if not panels %}
@@ -159,7 +160,7 @@ $(window).load(function(){
 		<script src="statuspage.js" type="text/javascript"></script>
    
 
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reporting">Report an Incident</button>
+		
 
 <!-- Modal -->
 <div class="modal fade" id="reporting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
