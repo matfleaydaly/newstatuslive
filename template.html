@@ -77,7 +77,7 @@ $(window).load(function(){
 
 </script>
 	</head>
-	<body style="background-color:#222222">
+	<body style="background-color:#222222" link="#C0C0C0" vlink="#808080" alink="#FF0000">
 
 		<main class="wrapper">
 					<div style="text-align:right">
@@ -97,7 +97,7 @@ $(window).load(function(){
 					</div>
 				{% else %}
 					{% for severity, systems in panels.items() if systems %}
-					<div class="panel {{ severity }}" style="text-color:#ffffff;">
+					<div class="panel {{ severity }}">
 						<a href="#incidents"><span data-l10n-id="{{ severity.capitalize().replace(" ", '-') }}">{{ severity.capitalize() }}</span> <span data-l10n-id="on">on</span> {% for system in systems %}{{ system }}{% if not loop.last %}, {% endif %}{% endfor %}.</a>
 					</div>
 					{% endfor %}
