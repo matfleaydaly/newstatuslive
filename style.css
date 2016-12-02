@@ -41,12 +41,3 @@ a {
 a:hover {
   color: #ffffff;
 }
-
-social {
-  float: left;
-  width: calc(100% - 80px);
-}
-main {
-  float: right;
-  width: 100%;
-}
