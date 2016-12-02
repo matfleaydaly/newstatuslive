@@ -488,7 +488,7 @@ def get_incidents(repo, issues):
 
 
 def get_issues(repo):
-    return repo.get_issues(state="all", since=datetime.now() - timedelta(days=2))
+    return repo.get_issues(state="open" state="closed", since=datetime.now() - timedelta(days=2))
 
 
 def is_same_content(c1, c2):
