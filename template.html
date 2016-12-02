@@ -98,7 +98,7 @@ $(window).load(function(){
 				{% else %}
 					{% for severity, systems in panels.items() if systems %}
 					<div class="panel {{ severity }}">
-						<span data-l10n-id="{{ severity.capitalize().replace(" ", '-') }}">{{ severity.capitalize() }}</span> <span data-l10n-id="on">on</span> {% for system in systems %}{{ system }}{% if not loop.last %}, {% endif %}{% endfor %}.
+						<a href="#incidents"><span data-l10n-id="{{ severity.capitalize().replace(" ", '-') }}">{{ severity.capitalize() }}</span> <span data-l10n-id="on">on</span> {% for system in systems %}{{ system }}{% if not loop.last %}, {% endif %}{% endfor %}.</a>
 					</div>
 					{% endfor %}
 				{% endif %}
