@@ -41,3 +41,13 @@ a {
 a:hover {
   color: #ffffff;
 }
+
+parent {
+  display: flex;
+}
+social {
+  width: 200px;
+}
+main {
+  flex: 1;
+}
