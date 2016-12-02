@@ -42,12 +42,11 @@ a:hover {
   color: #ffffff;
 }
 
-parent {
-  display: flex;
-}
 social {
-  width: 200px;
+  float: left;
+  width: calc(100% - 80px);
 }
 main {
-  flex: 1;
+  float: right;
+  width: 100%;
 }
