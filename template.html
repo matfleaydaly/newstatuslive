@@ -158,6 +158,11 @@ $(window).load(function(){
 
 						{% if incident.closed %}
 							<span class="label operational float-right" data-l10n-id="resolved">resolved</span>
+						{% else %}
+							<span class="label {{ incident.severity }} float-right" data-l10n-id="{{ incident.severity.replace(" ", '-') }}">{{ incident.severity }}</span>
+						{% endif %}
+						{% for system in incident.systems %}
+							<span class="label system float-right">{{ system }}</span>
 						{% endfor %}
 						<hr/>
 
