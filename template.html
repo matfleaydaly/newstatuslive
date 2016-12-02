@@ -124,7 +124,7 @@ $(window).load(function(){
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				{% if incidents %}
 					{% for incident in incidents %}
-					<div class="incident">
+					<div class="incident" id="incidents">
 						<span class="date moment">{{ incident.created }} UTC</span>
 
 						{% if incident.closed %}
