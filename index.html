@@ -95,9 +95,11 @@ $(window).load(function(){
 				</div>
 				<br><br><br><br>
 				
-					<div class="panel operational" data-l10n-id="systems-operational">
-						All Systems operational.
+					
+					<div class="panel Maintenance In Progress">
+						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> Status Page.</a>
 					</div>
+					
 				
 
 				<h4 >MP Productions Services</h4>
@@ -120,7 +122,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Status Page <span class="status operational" data-l10n-id="operational">operational</span>
+						Status Page <span class="status Maintenance In Progress" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
 					</li>
 					
 					<li>
@@ -152,7 +154,25 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
-					<em data-l10n-id="no.incidents">No incidents available to display at this time.</em>
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2016-12-05 04:32:35 UTC</span>
+
+						
+							<span class="label Maintenance In Progress float-right" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+						
+						
+							<span class="label system float-right">Status Page</span>
+						
+						<hr/>
+
+						<span class="title">Status Page Maintenance</span>
+						<p>We're just tweaking the status page. <br>
+No Stress! - MPM</p>
+
+						
+					</div>
+					
 				
 			</section>
 
