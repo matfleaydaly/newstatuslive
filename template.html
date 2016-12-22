@@ -110,7 +110,7 @@ $(window).load(function(){
 				<ul class="systems">
 					{% for system, data in systems.items() %}
 					<li>
-						{{ system }} <span class="status {{ data.status }}" <a href="#incidents">data-l10n-id="{{ data.status.replace(" ", '-') }}">{{ data.status }}</a></span>
+						{{ system }} <a href="#incidents"><span class="status {{ data.status }}" data-l10n-id="{{ data.status.replace(" ", '-') }}">{{ data.status }}</span></a>
 					</li>
 					{% endfor %}
 				</ul>
