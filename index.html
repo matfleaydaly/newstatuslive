@@ -95,22 +95,16 @@ $(window).load(function(){
 				</div>
 				<br><br><br><br>
 				
-					
-					<div class="panel Maintenance Complete">
-						<a href="#incidents"><span data-l10n-id="Maintenance-complete">Maintenance complete</span> <span data-l10n-id="on">on</span> API Database.</a>
+					<div class="panel operational" data-l10n-id="systems-operational">
+						All Systems operational.
 					</div>
-					
-					<div class="panel Maintenance In Progress">
-						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> BCSV Website.</a>
-					</div>
-					
 				
 
 				<h4 >MP Productions Services</h4>
 				<ul class="systems">
 					
 					<li>
-						API Database <span class="status Maintenance Complete" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
+						API Database <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
@@ -151,7 +145,7 @@ $(window).load(function(){
 				<ul class="systems">
 					
 					<li>
-						BCSV Website <span class="status Maintenance In Progress" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+						BCSV Website <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
@@ -163,6 +157,10 @@ $(window).load(function(){
 					</li>
 					
 					<li>
+						Melbourne Tram Tours <span class="status operational" data-l10n-id="operational">operational</span>
+					</li>
+					
+					<li>
 						WCR Steamers Gallery <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
@@ -170,139 +168,7 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-02-12 04:04:52 UTC</span>
-
-						
-							<span class="label Maintenance Complete float-right" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
-						
-						
-							<span class="label system float-right">API Database</span>
-						
-						<hr/>
-
-						<span class="title">MP Productions API Maintenance</span>
-						<p>We're currently running an upgrade on our API Database. <br>
-This is a minor upgrade that will just add a couple changes. <br>
-The API will continue to operate during this period. <br>
-Thank You. - MPM</p>
-
-						
-							<span class="title"><em>Update <span class="moment">2017-02-12 05:06:13 UTC</span></em></span>
-							<p>Maintenance Complete. <br>
-API will continue to operate as normal. <br>
-Thank You. - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-02-12 03:56:05 UTC</span>
-
-						
-							<span class="label Maintenance In Progress float-right" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
-						
-						
-							<span class="label system float-right">BCSV Website</span>
-						
-						<hr/>
-
-						<span class="title">BCSV Website BETA Testing</span>
-						<p>Good Afternoon. <br>
-We are preparing the BCSV Website for further BETA testing. <br>
-Users may notice moments of slow loading during the time of BETA testing. <br>
-MP Productions will continue to monitor the website and the server to make sure that they are able to handle the load that is placed on them. <br>
-At any stage that we have further updates, we will post them here. <br>
-Thank You. - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-02-12 03:49:48 UTC</span>
-
-						
-							<span class="label operational float-right" data-l10n-id="resolved">resolved</span>
-						
-						
-							<span class="label system float-right">Marysville Crystal Gardens</span>
-						
-						<hr/>
-
-						<span class="title">Marysville Crystal Gardens Website Update</span>
-						<p>We've completed a core update to the Marysville Crystal Gardens Website. <br>
-The website is now operational again. <br>
-Thank You.  - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-02-12 03:48:54 UTC</span>
-
-						
-							<span class="label operational float-right" data-l10n-id="resolved">resolved</span>
-						
-						
-							<span class="label system float-right">WCR Steamers Gallery</span>
-						
-						<hr/>
-
-						<span class="title">WCR711 Website Update</span>
-						<p>We've completed a core update of the Steamers Gallery Website. <br>
-Website is now operational again. <br>
-Thank You. - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-02-06 09:59:32 UTC</span>
-
-						
-							<span class="label operational float-right" data-l10n-id="resolved">resolved</span>
-						
-						
-							<span class="label system float-right">Marysville Crystal Gardens</span>
-						
-						<hr/>
-
-						<span class="title">Hello Marysville Crystal Gardens</span>
-						<p>We welcome Marysville Crystal Gardens to the webspace of the wide world! <br>
-Great to have the website now online! <br>
-<a href="http://marysvillecrystalgardens.com.au">http://marysvillecrystalgardens.com.au</a> - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-01-25 11:42:26 UTC</span>
-
-						
-							<span class="label operational float-right" data-l10n-id="resolved">resolved</span>
-						
-						
-							<span class="label system float-right">Development Website</span>
-						
-							<span class="label system float-right">Feedback System</span>
-						
-							<span class="label system float-right">Status Page</span>
-						
-							<span class="label system float-right">Store</span>
-						
-							<span class="label system float-right">The Chute</span>
-						
-						<hr/>
-
-						<span class="title">MP Productions Maintenance Continued</span>
-						<p>Re Incident #77 
-<br> These MP Productions services are still undergoing maintenance to complete the introduction of our latest feature. <br>
-Thank You. - MPM 💯 🔨 😄 </p>
-
-						
-					</div>
-					
+					<em data-l10n-id="no.incidents">No incidents available to display at this time.</em>
 				
 			</section>
 
