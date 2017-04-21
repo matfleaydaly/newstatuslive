@@ -96,8 +96,8 @@ $(window).load(function(){
 				<br><br><br><br>
 				
 					
-					<div class="panel Maintenance In Progress">
-						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> API Database.</a>
+					<div class="panel Maintenance Complete">
+						<a href="#incidents"><span data-l10n-id="Maintenance-complete">Maintenance complete</span> <span data-l10n-id="on">on</span> API Database.</a>
 					</div>
 					
 				
@@ -106,7 +106,7 @@ $(window).load(function(){
 				<ul class="systems">
 					
 					<li>
-						API Database <span class="status Maintenance In Progress" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+						API Database <span class="status Maintenance Complete" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
 					</li>
 					
 					<li>
@@ -175,7 +175,7 @@ $(window).load(function(){
 						<span class="date moment">2017-04-08 09:29:26 UTC</span>
 
 						
-							<span class="label Maintenance In Progress float-right" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+							<span class="label Maintenance Complete float-right" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
 						
 						
 							<span class="label system float-right">API Database</span>
@@ -266,7 +266,7 @@ Thank You. - MPM</p>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">What's New Here <h6 align="right">V:1.1.29-rc.h</h6></h4>
+        <h4 class="modal-title" id="myModalLabel">What's New Here <h6 align="right"><?php $data = json_decode(file_get_contents('http://currentstatus.mattsphotos.com.au/d/api2?id=8081'), true); print_r($status); echo $data["status"]; ?></h6></h4>
       </div>
       <div class="modal-body">
 	      <p>We're always working hard to update this status page with your suggestions. <br>
