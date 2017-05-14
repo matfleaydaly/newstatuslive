@@ -220,9 +220,7 @@ $(window).load(function(){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">What's New Here <h6 align="right">V: </h6></h4><?php
-echo file_get_contents("http://currentstatus.mattsphotos.com.au/statuspage.php");
-?>
+        <h4 class="modal-title" id="myModalLabel">What's New Here <h6 align="right">V:<iframe src="http://currentstatus.mattsphotos.com.au/statuspage.php" width="100%" height="20" frameborder="0" allowtransparency="true" scrolling="no"></iframe> </h6></h4>
       </div>
       <div class="modal-body">
 	      <p>We're always working hard to update this status page with your suggestions. <br>
