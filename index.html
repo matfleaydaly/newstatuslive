@@ -95,9 +95,11 @@ $(window).load(function(){
 				</div>
 				<br><br><br><br>
 				
-					<div class="panel operational" data-l10n-id="systems-operational">
-						All Systems operational.
+					
+					<div class="panel major outage">
+						<a href="#incidents"><span data-l10n-id="Major-outage">Major outage</span> <span data-l10n-id="on">on</span> Store.</a>
 					</div>
+					
 				
 
 				<h4 >MP Productions Services</h4>
@@ -136,7 +138,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Store <span class="status operational" data-l10n-id="operational">operational</span>
+						Store <span class="status major outage" data-l10n-id="major-outage">major outage</span>
 					</li>
 					
 					<li>
@@ -172,7 +174,26 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
-					<em data-l10n-id="no.incidents">No incidents available to display at this time.</em>
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-05-22 05:24:18 UTC</span>
+
+						
+							<span class="label major outage float-right" data-l10n-id="major-outage">major outage</span>
+						
+						
+							<span class="label system float-right">Store</span>
+						
+						<hr/>
+
+						<span class="title">MP Productions Store Offline</span>
+						<p>The MP Productions Store is currently undergoing a major outage. <br>
+This is planned and should be fixed over the next few days. <br>
+Thank You. - MPM</p>
+
+						
+					</div>
+					
 				
 			</section>
 
