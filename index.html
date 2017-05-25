@@ -96,6 +96,14 @@ $(window).load(function(){
 				<br><br><br><br>
 				
 					
+					<div class="panel General Alert">
+						<a href="#incidents"><span data-l10n-id="General-alert">General alert</span> <span data-l10n-id="on">on</span> API Database.</a>
+					</div>
+					
+					<div class="panel Planned Maintenance">
+						<a href="#incidents"><span data-l10n-id="Planned-maintenance">Planned maintenance</span> <span data-l10n-id="on">on</span> Status Page.</a>
+					</div>
+					
 					<div class="panel major outage">
 						<a href="#incidents"><span data-l10n-id="Major-outage">Major outage</span> <span data-l10n-id="on">on</span> Store.</a>
 					</div>
@@ -104,13 +112,17 @@ $(window).load(function(){
 						<a href="#incidents"><span data-l10n-id="Partial-outage">Partial outage</span> <span data-l10n-id="on">on</span> BCSV Website.</a>
 					</div>
 					
+					<div class="panel Monitoring">
+						<a href="#incidents"><span data-l10n-id="Monitoring">Monitoring</span> <span data-l10n-id="on">on</span> Brenden Schonfelder's Website, Marysville Crystal Gardens, Melbourne Tram Tours, WCR Steamers Gallery.</a>
+					</div>
+					
 				
 
 				<h4 >MP Productions Services</h4>
 				<ul class="systems">
 					
 					<li>
-						API Database <span class="status operational" data-l10n-id="operational">operational</span>
+						API Database <span class="status General Alert" data-l10n-id="General-Alert">General Alert</span>
 					</li>
 					
 					<li>
@@ -138,7 +150,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Status Page <span class="status operational" data-l10n-id="operational">operational</span>
+						Status Page <span class="status Planned Maintenance" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
 					</li>
 					
 					<li>
@@ -159,25 +171,92 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Brenden Schonfelder's Website <span class="status operational" data-l10n-id="operational">operational</span>
+						Brenden Schonfelder's Website <span class="status Monitoring" data-l10n-id="Monitoring">Monitoring</span>
 					</li>
 					
 					<li>
-						Marysville Crystal Gardens <span class="status operational" data-l10n-id="operational">operational</span>
+						Marysville Crystal Gardens <span class="status Monitoring" data-l10n-id="Monitoring">Monitoring</span>
 					</li>
 					
 					<li>
-						Melbourne Tram Tours <span class="status operational" data-l10n-id="operational">operational</span>
+						Melbourne Tram Tours <span class="status Monitoring" data-l10n-id="Monitoring">Monitoring</span>
 					</li>
 					
 					<li>
-						WCR Steamers Gallery <span class="status operational" data-l10n-id="operational">operational</span>
+						WCR Steamers Gallery <span class="status Monitoring" data-l10n-id="Monitoring">Monitoring</span>
 					</li>
 					
 				</ul>
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-05-25 12:18:37 UTC</span>
+
+						
+							<span class="label Monitoring float-right" data-l10n-id="Monitoring">Monitoring</span>
+						
+						
+							<span class="label system float-right">BCSV Website</span>
+						
+							<span class="label system float-right">Brenden Schonfelder's Website</span>
+						
+							<span class="label system float-right">Marysville Crystal Gardens</span>
+						
+							<span class="label system float-right">Melbourne Tram Tours</span>
+						
+							<span class="label system float-right">WCR Steamers Gallery</span>
+						
+						<hr/>
+
+						<span class="title">Client Email Issues</span>
+						<p>We are currently monitoring all Client Services with the email issues that are being experienced. <br>
+If you are a client and you are seeing this alert, Please do not hesitate to contact us via the CRM. <br>
+Thank You. - MPSA</p>
+
+						
+					</div>
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-05-25 12:15:48 UTC</span>
+
+						
+							<span class="label General Alert float-right" data-l10n-id="General-Alert">General Alert</span>
+						
+						
+							<span class="label system float-right">API Database</span>
+						
+						<hr/>
+
+						<span class="title">API Database Works</span>
+						<p>We are planning to complete some works to the API Database Backend. <br>
+This is a General Alert as it should not affect the public operations of the API at this time. <br>
+Any updates will be posted here. <br>
+Thank You. - MPSA</p>
+
+						
+					</div>
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-05-25 12:12:22 UTC</span>
+
+						
+							<span class="label Planned Maintenance float-right" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+						
+						
+							<span class="label system float-right">Status Page</span>
+						
+						<hr/>
+
+						<span class="title">Status Page Maintenance</span>
+						<p>We have some <strong>## Planned Maintenance</strong> works for the <strong>## Status Page</strong>. <br>
+These works will be minor, but aim to make the What's New modal display remote content. This will make updating the content more easy and flexible. <br>
+Updates available soon. <br>
+Thank You. - MPSA</p>
+
+						
+					</div>
 					
 					<div class="incident" id="incidents">
 						<span class="date moment">2017-05-25 03:06:29 UTC</span>
