@@ -95,9 +95,11 @@ $(window).load(function(){
 				</div>
 				<br><br><br><br>
 				
-					<div class="panel operational" data-l10n-id="systems-operational">
-						All Systems operational.
+					
+					<div class="panel partial outage">
+						<a href="#incidents"><span data-l10n-id="Partial-outage">Partial outage</span> <span data-l10n-id="on">on</span> CRM.</a>
 					</div>
+					
 				
 
 				<h4 >MP Productions Services</h4>
@@ -112,7 +114,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						CRM <span class="status operational" data-l10n-id="operational">operational</span>
+						CRM <span class="status partial outage" data-l10n-id="partial-outage">partial outage</span>
 					</li>
 					
 					<li>
@@ -172,7 +174,30 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
-					<em data-l10n-id="no.incidents">No incidents available to display at this time.</em>
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-06-07 12:13:39 UTC</span>
+
+						
+							<span class="label partial outage float-right" data-l10n-id="partial-outage">partial outage</span>
+						
+						
+							<span class="label system float-right">CRM</span>
+						
+						<hr/>
+
+						<span class="title">CRM Email Issues</span>
+						<p>Good Evening. <br>
+We're currently experiencing some issues with our CRM this evening. <br>
+We've had issues with a <strong>cron job</strong> that we run on our backend, that automatically pulls emails from our CRM email account and transfers them into the system. <br>
+We're currently in the process of rectifying the issue through some code. <br>
+The CRM will operate correctly, but you will experience some issues with the email communication. <br>
+Let's hope that we can get this solved ASAP. <br>
+Thank You for your understanding. - MPM</p>
+
+						
+					</div>
+					
 				
 			</section>
 
