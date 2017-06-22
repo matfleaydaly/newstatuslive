@@ -32,9 +32,7 @@ a.twitter-follow-button {
 }
 
 html {
-    background-image:url('http://mattsphotos.com.au/wp-content/uploads/2017/06/MPBanner1_2017_MayJuneOPT2.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-color: #171717;
 }
 
 a {
