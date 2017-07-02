@@ -96,16 +96,12 @@ $(window).load(function(){
 				<br><br><br><br>
 				
 					
-					<div class="panel Planned Maintenance">
-						<a href="#incidents"><span data-l10n-id="Planned-maintenance">Planned maintenance</span> <span data-l10n-id="on">on</span> Dashboard, Development Website - Restricted, The Chute.</a>
+					<div class="panel Maintenance In Progress">
+						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> CRM.</a>
 					</div>
 					
 					<div class="panel General Alert">
 						<a href="#incidents"><span data-l10n-id="General-alert">General alert</span> <span data-l10n-id="on">on</span> BCSV Website.</a>
-					</div>
-					
-					<div class="panel Upgrade in Progress">
-						<a href="#incidents"><span data-l10n-id="Upgrade-in-progress">Upgrade in progress</span> <span data-l10n-id="on">on</span> WCR Steamers Gallery.</a>
 					</div>
 					
 				
@@ -122,15 +118,15 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						CRM <span class="status operational" data-l10n-id="operational">operational</span>
+						CRM <span class="status Maintenance In Progress" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
 					</li>
 					
 					<li>
-						Dashboard <span class="status Planned Maintenance" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+						Dashboard <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
-						Development Website - Restricted <span class="status Planned Maintenance" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+						Development Website - Restricted <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
@@ -154,7 +150,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						The Chute <span class="status Planned Maintenance" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+						The Chute <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 				</ul>
@@ -179,13 +175,33 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						WCR Steamers Gallery <span class="status Upgrade in Progress" data-l10n-id="Upgrade-in-Progress">Upgrade in Progress</span>
+						WCR Steamers Gallery <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 				</ul>
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-07-02 12:59:45 UTC</span>
+
+						
+							<span class="label Maintenance In Progress float-right" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+						
+						
+							<span class="label system float-right">CRM</span>
+						
+						<hr/>
+
+						<span class="title">Minor CRM Maintenance Works</span>
+						<p>Good Evening. <br>
+We're currently undertaking some minor maintenance works to the CRM. <br>
+This should not impact the service. <br>
+Thank You. - MPM</p>
+
+						
+					</div>
 					
 					<div class="incident" id="incidents">
 						<span class="date moment">2017-07-01 02:24:28 UTC</span>
@@ -209,72 +225,6 @@ If you notice any issues with the BCSV Website that you feel we're not aware of,
 We would love to hear any feedback that you might have, and we also really hope you enjoy the amount of work that has been put towards the website. <br>
 Thank You very much, you may view the website via <a href="http://bcsv.org.au">http://bcsv.org.au</a><br>
 Thank You. - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-06-29 23:32:23 UTC</span>
-
-						
-							<span class="label Planned Maintenance float-right" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
-						
-						
-							<span class="label system float-right">Dashboard</span>
-						
-							<span class="label system float-right">Development Website - Restricted</span>
-						
-							<span class="label system float-right">The Chute</span>
-						
-						<hr/>
-
-						<span class="title">Major Backend Works</span>
-						<p>Good Morning. <br>
-Sadly the days of clef are coming to an end... nooooooo!!! <br>
-As a result we've only got a short period of time to remove clef from our Wordpress installations. <br>
-What will this mean to you? Well it's going to cause a few issues here and there. <br>
-Our installations have used clef for a long time now, and removing clef could prove a bit more time consuming. <br>
-Removing clef will not compromise your data under any circumstances. We take privacy very seriously, and are doing all we can to make sure that our strategic approach to how we progress without clef, is well thought. <br>
-We will provide updates as they become available, please do check this status page frequently. <br>
-Thank You. - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-06-21 13:17:45 UTC</span>
-
-						
-							<span class="label Upgrade in Progress float-right" data-l10n-id="Upgrade-in-Progress">Upgrade in Progress</span>
-						
-						
-							<span class="label system float-right">WCR Steamers Gallery</span>
-						
-						<hr/>
-
-						<span class="title">WCR Steamers Gallery Planned Maintenance Works</span>
-						<p>Good Evening. <br>
-We've got some Planned Maintenance Works on the WCR Steamers Gallery Website. <br>
-You may experience minor downtime over the next few days as we test some new features. <br>
-We'll have more details as they become available. <br>
-Thank You. - MPSA</p>
-
-						
-							<span class="title"><em>Update <span class="moment">2017-06-26 06:55:33 UTC</span></em></span>
-							<p>These maintenance/upgrade works have begun. <br>
-The gallery is currently offline during these works, due to stability requirements. <br>
-Please contact us via our social media options if required. <br>
-- <a href="http://facebook.com/mattsphotos.com.au">Facebook</a><br>
-- <a href="http://twitter.com/mpmattsphotos">Twitter</a><br>
-Thank You. - MPM</p>
-
-						
-							<span class="title"><em>Update <span class="moment">2017-06-29 22:58:37 UTC</span></em></span>
-							<p>Good Morning internet folks! <br>
-The WCR Steamers Gallery Website is still offline for Upgrade works... <br>
-We can assure you that we'll have more updates soon. <br>
-On the plus side, the financing team are being kept away from the upgrade which should mean it will be completed without any issues!! <br>
-Thank you for your patience. - MPM</p>
 
 						
 					</div>
