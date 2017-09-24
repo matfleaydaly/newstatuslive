@@ -96,12 +96,8 @@ $(window).load(function(){
 				<br><br><br><br>
 				
 					
-					<div class="panel Maintenance Complete">
-						<a href="#incidents"><span data-l10n-id="Maintenance-complete">Maintenance complete</span> <span data-l10n-id="on">on</span> API Database, Social Media Communications, Status Page.</a>
-					</div>
-					
-					<div class="panel Planned Maintenance">
-						<a href="#incidents"><span data-l10n-id="Planned-maintenance">Planned maintenance</span> <span data-l10n-id="on">on</span> Melbourne Tram Tours.</a>
+					<div class="panel partial outage">
+						<a href="#incidents"><span data-l10n-id="Partial-outage">Partial outage</span> <span data-l10n-id="on">on</span> CRM.</a>
 					</div>
 					
 				
@@ -110,7 +106,7 @@ $(window).load(function(){
 				<ul class="systems">
 					
 					<li>
-						API Database <span class="status Maintenance Complete" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
+						API Database <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
@@ -118,7 +114,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						CRM <span class="status operational" data-l10n-id="operational">operational</span>
+						CRM <span class="status partial outage" data-l10n-id="partial-outage">partial outage</span>
 					</li>
 					
 					<li>
@@ -138,11 +134,11 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Social Media Communications <span class="status Maintenance Complete" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
+						Social Media Communications <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
-						Status Page <span class="status Maintenance Complete" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
+						Status Page <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
@@ -171,7 +167,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Melbourne Tram Tours <span class="status Planned Maintenance" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+						Melbourne Tram Tours <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
@@ -184,46 +180,24 @@ $(window).load(function(){
 				
 					
 					<div class="incident" id="incidents">
-						<span class="date moment">2017-09-18 23:13:03 UTC</span>
+						<span class="date moment">2017-09-24 22:09:17 UTC</span>
 
 						
-							<span class="label Planned Maintenance float-right" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+							<span class="label partial outage float-right" data-l10n-id="partial-outage">partial outage</span>
 						
 						
-							<span class="label system float-right">Melbourne Tram Tours</span>
+							<span class="label system float-right">CRM</span>
 						
 						<hr/>
 
-						<span class="title">Melbourne Tram Tours Website Maintenance</span>
-						<p>Good Morning. <br>
-As continued developments of the Melbourne Tram Tours website continues, there will be some Maintenance later today. <br>
-The website may experience slower loading than normal, and partial outages.<br>
-More information to come. <br>
-Thank You. - MPM</p>
-
-						
-					</div>
-					
-					<div class="incident" id="incidents">
-						<span class="date moment">2017-09-14 10:12:25 UTC</span>
-
-						
-							<span class="label Maintenance Complete float-right" data-l10n-id="Maintenance-Complete">Maintenance Complete</span>
-						
-						
-							<span class="label system float-right">API Database</span>
-						
-							<span class="label system float-right">Social Media Communications</span>
-						
-							<span class="label system float-right">Status Page</span>
-						
-						<hr/>
-
-						<span class="title">Maintenance Improvement Works</span>
-						<p>We've got some Maintenance Improvement Works in progress this evening. <br>
-This may affect how you access our <strong><em>Status Page</em></strong> and some of our <strong><em>Social Media Communications.</em></strong><br>
-We hope this won't take long. <br>
-Thank You. - MPTA</p>
+						<span class="title">Email Test Service Partial Outage</span>
+						<p>Good Morning <br>
+We are currently aware of the issues affecting the Email Test Service autoresponder. <br>
+It’s been reported that there’s some funky code being sent with the mail, and that it isn’t detecting appropriate values as required (<strong>see screenshot below</strong>). <br>
+We’re currently working towards a solution as this issue should not be occurring. <br>
+If you require use of this service, please contact us via the <strong>CRM</strong>. <br>
+Thank You, we hope to have updates soon. - MPM
+<img src="https://i.imgur.com/2CFcuFE.jpg" alt="Image" /></p>
 
 						
 					</div>
