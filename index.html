@@ -8,11 +8,11 @@
 		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
 		<meta name="description" content="MP Productions Status Page, We use this page to communicate incidents to our services.">
 		<meta name="author" content="MP Productions">
-		<title>{{ config.title }}</title>
+		<title>MP Productions System Status</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 		<link rel="stylesheet" href="style.css">
-		<link rel="icon" href="{{ config.favicon }}">
+		<link rel="icon" href="http://mattsphotos.com.au/favicon.ico">
 
 		<link rel="prefetch" type="application/l10n" href="translations.ini" />
 		<script>
@@ -20,7 +20,7 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ config.googleanalytics }}', 'auto');
+      ga('create', 'UA-77380925-2', 'auto');
       ga('set', 'anonymizeIp', true);
       ga('set', 'forceSSL', true);
       ga('send', 'pageview');
@@ -89,75 +89,205 @@ $(window).load(function(){
 					</div>
 			<section class="container" id="main">
 				<div class="headername">
-					<a href="http://mpsau.com/statuspg"><img src="{{ config.logo }}" /></a>
-					<a href="http://mpsau.com/statuspg"><h1>{{ config.title }}</h1></a>
+					<a href="http://mpsau.com/statuspg"><img src="https://pbs.twimg.com/profile_images/735452701354426368/9VdHrt3V_400x400.jpg" /></a>
+					<a href="http://mpsau.com/statuspg"><h1>MP Productions System Status</h1></a>
 
 				</div>
 				<br><br><br><br>
-				{% if not panels %}
-					<div class="panel operational" data-l10n-id="systems-operational">
-						All Systems operational.
+				
+					
+					<div class="panel major outage">
+						<a href="#incidents"><span data-l10n-id="Major-outage">Major outage</span> <span data-l10n-id="on">on</span> API Database, Apple News, CRM, Dashboard, Development Website - Restricted, Feedback System - Restricted, Gallery, Social Media Communications, Status Page, Store, The Chute, BCSV Website, Brenden Schonfelder's Website, Marysville Crystal Gardens, Melbourne Tram Tours.</a>
 					</div>
-				{% else %}
-					{% for severity, systems in panels.items() if systems %}
-					<div class="panel {{ severity }}">
-						<a href="#incidents"><span data-l10n-id="{{ severity.capitalize().replace(" ", '-') }}">{{ severity.capitalize() }}</span> <span data-l10n-id="on">on</span> {% for system in systems %}{{ system }}{% if not loop.last %}, {% endif %}{% endfor %}.</a>
+					
+					<div class="panel Maintenance In Progress">
+						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> WCR Steamers Gallery.</a>
 					</div>
-					{% endfor %}
-				{% endif %}
+					
+				
 
 				<h4 >MP Productions Services</h4>
 				<ul class="systems">
-					{% for system, data in systems.items() %}
+					
 					<li>
-						{{ system }} <span class="status {{ data.status }}" data-l10n-id="{{ data.status.replace(" ", '-') }}">{{ data.status }}</span>
+						API Database <span class="status major outage" data-l10n-id="major-outage">major outage</span>
 					</li>
-					{% endfor %}
+					
+					<li>
+						Apple News <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						CRM <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Dashboard <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Development Website - Restricted <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Feedback System - Restricted <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Gallery <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Social Media Communications <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Status Page <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Store <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						The Chute <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
 				</ul>
 
 				<h4 >MP Productions Client Websites</h4>
 				<ul class="systems">
-					{% for system, data in client_systems.items() %}
+					
 					<li>
-						{{ system }} <span class="status {{ data.status }}" data-l10n-id="{{ data.status.replace(" ", '-') }}">{{ data.status }}</span>
+						BCSV Website <span class="status major outage" data-l10n-id="major-outage">major outage</span>
 					</li>
-					{% endfor %}
+					
+					<li>
+						Brenden Schonfelder's Website <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Marysville Crystal Gardens <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						Melbourne Tram Tours <span class="status major outage" data-l10n-id="major-outage">major outage</span>
+					</li>
+					
+					<li>
+						WCR Steamers Gallery <span class="status Maintenance In Progress" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+					</li>
+					
 				</ul>
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
-				{% if incidents %}
-					{% for incident in incidents %}
+				
+					
 					<div class="incident" id="incidents">
-						<span class="date moment">{{ incident.created }} UTC</span>
+						<span class="date moment">2017-10-10 06:14:33 UTC</span>
 
-						{% if incident.closed %}
-							<span class="label operational float-right" data-l10n-id="resolved">resolved</span>
-						{% else %}
-							<span class="label {{ incident.severity }} float-right" data-l10n-id="{{ incident.severity.replace(" ", '-') }}">{{ incident.severity }}</span>
-						{% endif %}
-						{% for system in incident.systems %}
-							<span class="label system float-right">{{ system }}</span>
-						{% endfor %}
+						
+							<span class="label major outage float-right" data-l10n-id="major-outage">major outage</span>
+						
+						
+							<span class="label system float-right">API Database</span>
+						
+							<span class="label system float-right">Apple News</span>
+						
+							<span class="label system float-right">BCSV Website</span>
+						
+							<span class="label system float-right">Brenden Schonfelder's Website</span>
+						
+							<span class="label system float-right">CRM</span>
+						
+							<span class="label system float-right">Dashboard</span>
+						
+							<span class="label system float-right">Development Website - Restricted</span>
+						
+							<span class="label system float-right">Feedback System - Restricted</span>
+						
+							<span class="label system float-right">Gallery</span>
+						
+							<span class="label system float-right">Marysville Crystal Gardens</span>
+						
+							<span class="label system float-right">Melbourne Tram Tours</span>
+						
+							<span class="label system float-right">Social Media Communications</span>
+						
+							<span class="label system float-right">Status Page</span>
+						
+							<span class="label system float-right">Store</span>
+						
+							<span class="label system float-right">The Chute</span>
+						
+							<span class="label system float-right">WCR Steamers Gallery</span>
+						
 						<hr/>
 
-						<span class="title">{{ incident.title }}</span>
-						{{ incident.body|safe }}
-						{% for update in incident.updates %}
-							<span class="title"><em>Update <span class="moment">{{ update.created }} UTC</span></em></span>
-							{{ update.body|safe }}
-						{% endfor %}
+						<span class="title">STATUS PAGE CURRENTLY OFFLINE</span>
+						<p>STATUS PAGE CURRENTLY OFFLINE</p>
+
+						
 					</div>
-					{% endfor %}
-				{% else %}
-					<em data-l10n-id="no.incidents">No incidents available to display at this time.</em>
-				{% endif %}
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-10-07 14:50:20 UTC</span>
+
+						
+							<span class="label major outage float-right" data-l10n-id="major-outage">major outage</span>
+						
+						
+							<span class="label system float-right">API Database</span>
+						
+						<hr/>
+
+						<span class="title">Planned Maintenance API System</span>
+						<p>We’ve got some Planned Maintenance Works to update some pages on the website. 
+More information as it’s available. 
+Thank You - MPSA</p>
+
+						
+							<span class="title"><em>Update <span class="moment">2017-10-08 08:51:41 UTC</span></em></span>
+							<p>Maintenance is now in progress on the API System. <br>
+The Current Status system will be offline for this period of time whilst we update the system. <br>
+Feel free to contact us via our contact page or twitter at any time. <br>
+Thank You. - MPM</p>
+
+						
+					</div>
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-10-07 14:49:17 UTC</span>
+
+						
+							<span class="label Maintenance In Progress float-right" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+						
+						
+							<span class="label system float-right">WCR Steamers Gallery</span>
+						
+						<hr/>
+
+						<span class="title">Planned Maintenance Steamers Gallery</span>
+						<p>We’ve got some Planned Maintenance Works to update some pages on the website. <br>
+More information as it’s available. <br>
+Thank You - MPSA</p>
+
+						
+							<span class="title"><em>Update <span class="moment">2017-10-08 09:03:03 UTC</span></em></span>
+							<p>Maintenance is now in progress on the Steamers Gallery website. <br>
+Thank You. - MPM</p>
+
+						
+					</div>
+					
+				
 			</section>
 
 
 			<footer class="footer">
 				<section class="container">
 					<hr/>
-					<p>{{ config.footer }}<br> <a href="#" data-toggle="modal" data-target="#changelog" style="float: right;">What's New</a></p>
+					<p><a href='http://mattsphotos.com.au'>MP Productions</a> 2017<br> <a href="#" data-toggle="modal" data-target="#changelog" style="float: right;">What's New</a></p>
 					
 				</section>
 			</footer>
