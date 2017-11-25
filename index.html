@@ -104,6 +104,10 @@ $(window).load(function(){
 						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> Gallery.</a>
 					</div>
 					
+					<div class="panel partial outage">
+						<a href="#incidents"><span data-l10n-id="Partial-outage">Partial outage</span> <span data-l10n-id="on">on</span> Status Page.</a>
+					</div>
+					
 					<div class="panel Planned Maintenance">
 						<a href="#incidents"><span data-l10n-id="Planned-maintenance">Planned maintenance</span> <span data-l10n-id="on">on</span> BCSV Website, Brenden Schonfelder's Website, Marysville Crystal Gardens, WCR Steamers Gallery.</a>
 					</div>
@@ -150,7 +154,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Status Page <span class="status operational" data-l10n-id="operational">operational</span>
+						Status Page <span class="status partial outage" data-l10n-id="partial-outage">partial outage</span>
 					</li>
 					
 					<li>
@@ -186,6 +190,25 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-11-25 10:13:47 UTC</span>
+
+						
+							<span class="label partial outage float-right" data-l10n-id="partial-outage">partial outage</span>
+						
+						
+							<span class="label system float-right">Status Page</span>
+						
+						<hr/>
+
+						<span class="title">Status Page Parial Outage</span>
+						<p>We are aware that the module to report services as offline on the <strong>Status Page</strong> is not working. <br>
+Currently we're working towards a better solution that doesn't require as many resources on our server. <br>
+Stay Tuned for updates! - MPM</p>
+
+						
+					</div>
 					
 					<div class="incident" id="incidents">
 						<span class="date moment">2017-11-25 10:11:09 UTC</span>
