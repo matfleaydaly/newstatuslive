@@ -95,9 +95,15 @@ $(window).load(function(){
 				</div>
 				<br><br><br><br>
 				
-					<div class="panel operational" data-l10n-id="systems-operational">
-						All Systems operational.
+					
+					<div class="panel Maintenance In Progress">
+						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> Gallery.</a>
 					</div>
+					
+					<div class="panel Planned Maintenance">
+						<a href="#incidents"><span data-l10n-id="Planned-maintenance">Planned maintenance</span> <span data-l10n-id="on">on</span> BCSV Website.</a>
+					</div>
+					
 				
 
 				<h4 >MP Productions Services</h4>
@@ -128,7 +134,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Gallery <span class="status operational" data-l10n-id="operational">operational</span>
+						Gallery <span class="status Maintenance In Progress" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
 					</li>
 					
 					<li>
@@ -153,7 +159,7 @@ $(window).load(function(){
 				<ul class="systems">
 					
 					<li>
-						BCSV Website <span class="status operational" data-l10n-id="operational">operational</span>
+						BCSV Website <span class="status Planned Maintenance" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
 					</li>
 					
 					<li>
@@ -176,6 +182,44 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-11-25 10:06:05 UTC</span>
+
+						
+							<span class="label Planned Maintenance float-right" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+						
+						
+							<span class="label system float-right">BCSV Website</span>
+						
+						<hr/>
+
+						<span class="title">BCSV Planned Outage for Maintenance Works</span>
+						<p>Please be advised that due to Security works, The BCSV Website will be offline for a short period of time. <br>
+We are yet to confirm when this will occur, and will update as required. <br>
+Thank You. - MPM</p>
+
+						
+					</div>
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2017-11-25 10:05:03 UTC</span>
+
+						
+							<span class="label Maintenance In Progress float-right" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+						
+						
+							<span class="label system float-right">Gallery</span>
+						
+						<hr/>
+
+						<span class="title">Gallery Outage</span>
+						<p>Due to security works, The MP Gallery will be offline. <br>
+We anticipate that these works will be done ASAP, and we will notify when the Gallery is back online. <br>
+Thank You.- MPM</p>
+
+						
+					</div>
 					
 					<div class="incident" id="incidents">
 						<span class="date moment">2017-11-24 02:13:18 UTC</span>
