@@ -95,9 +95,11 @@ $(window).load(function(){
 				</div>
 				<br><br><br><br>
 				
-					<div class="panel operational" data-l10n-id="systems-operational">
-						All Systems operational.
+					
+					<div class="panel Planned Maintenance">
+						<a href="#incidents"><span data-l10n-id="Planned-maintenance">Planned maintenance</span> <span data-l10n-id="on">on</span> Dashboard.</a>
 					</div>
+					
 				
 
 				<h4 >MP Productions Services</h4>
@@ -116,7 +118,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Dashboard <span class="status operational" data-l10n-id="operational">operational</span>
+						Dashboard <span class="status Planned Maintenance" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
 					</li>
 					
 					<li>
@@ -172,6 +174,24 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2018-01-04 17:04:58 UTC</span>
+
+						
+							<span class="label Planned Maintenance float-right" data-l10n-id="Planned-Maintenance">Planned Maintenance</span>
+						
+						
+							<span class="label system float-right">Dashboard</span>
+						
+						<hr/>
+
+						<span class="title">Minor Maintenance for Dashboard</span>
+						<p>We’ve got some Planned Maintenance for the Dashboard, to update to 2018 branding. <br>
+Details soon. - MPMCM</p>
+
+						
+					</div>
 					
 					<div class="incident" id="incidents">
 						<span class="date moment">2017-12-28 11:55:28 UTC</span>
