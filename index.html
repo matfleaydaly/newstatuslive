@@ -97,7 +97,11 @@ $(window).load(function(){
 				
 					
 					<div class="panel Maintenance In Progress">
-						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> API Database, Apple News, CRM, Dashboard, Feedback System - Restricted, Gallery, PTDB, Service Uptime Monitor, Social Media Communications, Status Page, The Chute, BCSV Website, Brenden Schonfelder's Website, Marysville Crystal Gardens, Melbourne Tram Tours, WCR Steamers Gallery.</a>
+						<a href="#incidents"><span data-l10n-id="Maintenance-in-progress">Maintenance in progress</span> <span data-l10n-id="on">on</span> API Database, Apple News, CRM, Dashboard, Feedback System - Restricted, Gallery, PTDB, Service Uptime Monitor, Social Media Communications, Status Page, The Chute, BCSV Website, Brenden Schonfelder's Website, Marysville Crystal Gardens, WCR Steamers Gallery.</a>
+					</div>
+					
+					<div class="panel major outage">
+						<a href="#incidents"><span data-l10n-id="Major-outage">Major outage</span> <span data-l10n-id="on">on</span> Melbourne Tram Tours.</a>
 					</div>
 					
 				
@@ -167,7 +171,7 @@ $(window).load(function(){
 					</li>
 					
 					<li>
-						Melbourne Tram Tours <span class="status Maintenance In Progress" data-l10n-id="Maintenance-In-Progress">Maintenance In Progress</span>
+						Melbourne Tram Tours <span class="status major outage" data-l10n-id="major-outage">major outage</span>
 					</li>
 					
 					<li>
@@ -178,6 +182,26 @@ $(window).load(function(){
 
 				<h4 data-l10n-id="incidents">Incidents</h4>
 				
+					
+					<div class="incident" id="incidents">
+						<span class="date moment">2018-02-08 06:19:47 UTC</span>
+
+						
+							<span class="label major outage float-right" data-l10n-id="major-outage">major outage</span>
+						
+						
+							<span class="label system float-right">Melbourne Tram Tours</span>
+						
+						<hr/>
+
+						<span class="title">Major Outage Melbourne Tram Tours</span>
+						<p>Due to an issue with a core file, The Melbourne Tram Tours website is not online. <br>
+We've set the splash screen page in the meantime. <br>
+ETR is 22:00 this evening. <br>
+We do apologise. - MPM</p>
+
+						
+					</div>
 					
 					<div class="incident" id="incidents">
 						<span class="date moment">2018-02-08 04:51:39 UTC</span>
@@ -203,8 +227,6 @@ $(window).load(function(){
 							<span class="label system float-right">Gallery</span>
 						
 							<span class="label system float-right">Marysville Crystal Gardens</span>
-						
-							<span class="label system float-right">Melbourne Tram Tours</span>
 						
 							<span class="label system float-right">PTDB</span>
 						
